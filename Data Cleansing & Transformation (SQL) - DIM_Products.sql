@@ -39,8 +39,8 @@ SELECT
   --      ,[EndDate], 
   ISNULL (p.Status, 'Outdated') AS [Product Status] 
 FROM 
-  [AdventureWorksDW2019].[dbo].[DimProduct] as p
-  LEFT JOIN dbo.DimProductSubcategory AS ps ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey 
-  LEFT JOIN dbo.DimProductCategory AS pc ON ps.ProductCategoryKey = pc.ProductCategoryKey 
-order by 
-  p.ProductKey asc
+  [AdventureWorksDW2019].[dbo].[DimProduct] AS p
+  LEFT JOIN [AdventureWorksDW2019].dbo.DimProductSubcategory AS ps ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey 
+  LEFT JOIN [AdventureWorksDW2019].dbo.DimProductCategory AS pc ON ps.ProductCategoryKey = pc.ProductCategoryKey 
+ORDER BY
+  p.ProductKey ASC
